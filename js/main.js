@@ -34,6 +34,20 @@ const fadeObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
+// ── COPY WALLET ──
+document.querySelectorAll('.cafe-wallet__copy').forEach(btn => {
+  btn.addEventListener('click', () => {
+    navigator.clipboard.writeText(btn.dataset.addr).then(() => {
+      btn.textContent = '¡Copiado!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copiar dirección';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  });
+});
+
 // ── LIGHTBOX ──
 document.querySelectorAll('.gallery__item img, .showcase__img img, .screenshot img').forEach(img => {
   img.style.cursor = 'zoom-in';
