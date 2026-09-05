@@ -343,12 +343,12 @@ button { font-family: var(--font); }
 
 /* ── BUCKETS ── */
 .buckets {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .bucket {
-  border-radius: var(--radius); padding: 28px;
+  border-radius: var(--radius-sm); padding: 20px 24px;
   border: 1px solid transparent;
   transition: transform .2s;
 }
@@ -356,15 +356,15 @@ button { font-family: var(--font); }
 .bucket--green  { background: var(--green-bg);  border-color: var(--green-border); }
 .bucket--yellow { background: var(--yellow-bg); border-color: rgba(245,158,11,.25); }
 .bucket--blue   { background: var(--blue-bg);   border-color: rgba(59,130,246,.25); }
-.bucket h3 { font-size: 18px; font-weight: 800; margin-bottom: 8px; letter-spacing: -.3px; }
+.bucket h3 { font-size: 15px; font-weight: 800; margin-bottom: 4px; letter-spacing: -.2px; }
 .bucket--green h3  { color: var(--green); }
 .bucket--yellow h3 { color: var(--yellow); }
 .bucket--blue h3   { color: var(--blue); }
-.bucket p  { font-size: 13.5px; color: var(--text2); margin-bottom: 16px; line-height: 1.6; }
+.bucket p  { font-size: 13px; color: var(--text2); margin-bottom: 10px; line-height: 1.5; }
 .bucket ul { list-style: none; }
 .bucket li {
-  font-size: 13px; color: var(--text2);
-  padding: 7px 0; border-bottom: 1px solid var(--border);
+  font-size: 12.5px; color: var(--text2);
+  padding: 4px 0; border-bottom: 1px solid var(--border);
   display: flex; align-items: flex-start; gap: 8px;
 }
 .bucket li:last-child { border: none; padding-bottom: 0; }
