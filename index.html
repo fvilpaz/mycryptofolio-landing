@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyCryptoFolio · Tu cartera crypto, sin excusas</title>
+  <meta name="description" content="Gestiona tu cartera crypto en tiempo real. Cubos de estrategia, staking, airdrops y DCA mensual. Sin registro. Sin servidor. 100% privado.">
+  <meta property="og:title" content="MyCryptoFolio · Tu cartera crypto, sin excusas">
+  <meta property="og:description" content="Valor en vivo, cubos de estrategia, staking y DCA mensual. Instálala como app. Gratis.">
+  <meta property="og:image" content="img/cubos.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="nav">
+  <div class="nav__logo">MyCrypto<span>Folio</span></div>
+  <div class="nav__links">
+    <a href="#cubos" data-nav="cubos">Estrategia</a>
+    <a href="#cartera" data-nav="cartera">Cartera</a>
+    <a href="#staking" data-nav="staking">Staking</a>
+    <a href="#privacidad" data-nav="privacidad">Privacidad</a>
+    <a href="https://mycryptofolio.app" class="nav__cta" target="_blank" rel="noopener">Abrir app →</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero__badge">Precios en vivo · Sin registro · 100% privado</div>
+  <h1 class="hero__title">Tu cartera crypto,<br><em>sin excusas</em></h1>
+  <p class="hero__sub">
+    Valor en tiempo real, estrategia inteligente y staking en un solo lugar.
+    Arranca desde cero en 30 segundos.
+  </p>
+  <div class="hero__actions">
+    <a href="https://mycryptofolio.app" class="btn btn--primary" target="_blank" rel="noopener">
+      Abrir la app gratis
+    </a>
+    <a href="#cubos" class="btn btn--ghost">Ver cómo funciona</a>
+  </div>
+
+  <!-- Foto 1: pantalla principal con valor total y PnL -->
+  <div class="screenshot">
+    <img src="img/hero.jpg" alt="MyCryptoFolio, valor total y PnL en tiempo real">
+  </div>
+</section>
+
+<!-- ══ STATS ══ -->
+<div class="stats">
+  <div class="stat"><div class="stat__val">4</div><div class="stat__label">Fuentes de precios en vivo</div></div>
+  <div class="stat"><div class="stat__val">0 €</div><div class="stat__label">Coste de servidor</div></div>
+  <div class="stat"><div class="stat__val">100%</div><div class="stat__label">Datos en tu navegador</div></div>
+  <div class="stat"><div class="stat__val">PWA</div><div class="stat__label">Instálala como app nativa</div></div>
+</div>
+
+<!-- ══ CUBOS DE ESTRATEGIA ══ -->
+<section class="section section--border" id="cubos" data-section="cubos">
+  <div class="section__inner">
+    <p class="section__label">Estrategia</p>
+    <h2 class="section__title">Tu cartera dividida<br><em>en tres cubos</em></h2>
+    <p class="section__sub">
+      Núcleo, Satélites y Refugio. Cada cubo tiene un objetivo en % que tú fijas.
+      La app te muestra en todo momento si estás dentro o fuera del objetivo.
+    </p>
+
+    <!-- Foto 2: los 4 cubos en la pantalla principal (Núcleo, Satélites, Refugio + DCA) -->
+    <div class="showcase" style="margin-bottom:52px;">
+      <div class="showcase__text">
+        <div class="buckets">
+          <div class="bucket bucket--green">
+            <h3>Núcleo</h3>
+            <p>BTC + ETH. La base que no se toca.</p>
+            <ul>
+              <li>Fija el % objetivo del cubo (ej. 60%)</li>
+              <li>Decide el split interno: cuánto es BTC y cuánto ETH</li>
+              <li>Barra de progreso en tiempo real</li>
+              <li>Si estás por debajo, el reparto del mes te lo corrige</li>
+            </ul>
+          </div>
+          <div class="bucket bucket--yellow">
+            <h3>Satélites</h3>
+            <p>Mayor riesgo, mayor potencial. SOL, ATOM, TIA y los que añadas.</p>
+            <ul>
+              <li>Fija el % máximo del cubo (ej. 20%)</li>
+              <li>Reparte ese % entre tus tokens: 60% SOL, 25% ATOM, 15% TIA</li>
+              <li>Alerta automática si superas el tope</li>
+              <li>El reparto del mes bloquea este cubo si ya estás en el límite</li>
+            </ul>
+          </div>
+          <div class="bucket bucket--blue">
+            <h3>Refugio</h3>
+            <p>Tu colchón en USDC ante caídas del mercado.</p>
+            <ul>
+              <li>Fija el % objetivo (ej. 20%)</li>
+              <li>La app muestra cuántos € te faltan para cubrirlo</li>
+              <li>Chip verde "Cubierto" cuando llegas al objetivo</li>
+              <li>No distorsiona el PnL: USDC no sube ni baja</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="showcase__img">
+        <img src="img/cubos.jpg" alt="Cubos de estrategia: Núcleo, Satélites, Refugio y DCA mensual">
+      </div>
+    </div>
+
+    <!-- Foto 3: modal del cubo Núcleo, detalle BTC/ETH con desviación vs objetivo -->
+    <div class="showcase showcase--reverse" style="margin-bottom:52px;">
+      <div class="showcase__img">
+        <img src="img/nucleo-modal.jpg" alt="Ficha del cubo Núcleo con BTC y ETH, ganancias y desviación">
+      </div>
+      <div class="showcase__text">
+        <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;">Ficha de cubo: todo el detalle</h3>
+        <p style="color:var(--text2);font-size:15px;margin-bottom:16px;">
+          Pulsa cualquier cubo y ves el desglose completo: valor total, ganancias en € y %,
+          y cada moneda con su peso real vs. su objetivo individual.
+        </p>
+        <p style="color:var(--text2);font-size:15px;">
+          En el ejemplo: BTC está al 28.9% de la cartera cuando el objetivo es 30% → desviación de -1.1%.
+          ETH está al 35.1% cuando el objetivo es 20% → se está pasando en +15.1%.
+          La app lo detecta y el reparto del mes lo reequilibra automáticamente.
+        </p>
+      </div>
+    </div>
+
+    <!-- Foto 4 + 5: modal de edición de Satélites y buscador de monedas -->
+    <p class="section__label" style="margin-bottom:16px;">Cómo fijar los porcentajes</p>
+    <p style="color:var(--text2);font-size:15px;max-width:620px;margin-bottom:28px;">
+      Pulsa el lápiz ✎ de cualquier cubo para abrir el editor. Pon el % objetivo del cubo
+      y el reparto interno entre tokens. La app valida que sumen 100% antes de guardar.
+      Puedes añadir cualquier moneda de tu cartera al cubo desde el buscador.
+    </p>
+    <div class="gallery">
+      <div class="gallery__item">
+        <img src="img/satelites-modal.jpg" alt="Editor del cubo Satélites, % objetivo y splits por token">
+        <div class="gallery__caption">Editor de Satélites: objetivo 40%, split SOL 60% · ATOM 25% · TIA 15%</div>
+      </div>
+      <div class="gallery__item">
+        <img src="img/satelites-buscador.jpg" alt="Buscador de monedas para añadir al cubo">
+        <div class="gallery__caption">Añade cualquier moneda al cubo, busca por nombre o ticker</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ REPARTO DEL MES ══ -->
+<section class="section section--border" id="reparto">
+  <div class="section__inner">
+    <p class="section__label">DCA mensual</p>
+    <h2 class="section__title">Sabe exactamente<br><em>dónde meter el dinero</em></h2>
+    <p class="section__sub">
+      Pon tu objetivo mensual en €. La app te dice cuánto va a cada token este mes,
+      priorizando el que más lejos está de su objetivo.
+    </p>
+
+    <!-- Foto 7: reparto conservadora/moderada/agresiva -->
+    <div class="showcase" style="margin-bottom:48px;">
+      <div class="showcase__text">
+        <h3 style="font-size:19px;font-weight:800;margin-bottom:14px;">Tres estrategias. Tú eliges.</h3>
+        <p style="color:var(--text2);font-size:15px;margin-bottom:20px;">
+          <strong style="color:var(--text);">Conservadora</strong> · 50% Refugio · 35% Núcleo · 15% Satélites<br>
+          Para quienes priorizan proteger el capital.<br><br>
+          <strong style="color:var(--text);">Moderada</strong> · 30% Refugio · 50% Núcleo · 20% Satélites<br>
+          El equilibrio entre seguridad y crecimiento.<br><br>
+          <strong style="color:var(--text);">Agresiva</strong> · 15% Refugio · 60% Núcleo · 25% Satélites<br>
+          Máxima exposición al mercado.
+        </p>
+        <p style="color:var(--text2);font-size:14px;">
+          La <strong style="color:var(--text);">gap-logic</strong> ajusta el reparto automáticamente:
+          si ETH ya está en su objetivo pero BTC está corto, todo el dinero del Núcleo va a BTC ese mes.
+          Si los Satélites están en el tope, su parte se redistribuye al Núcleo y Refugio.
+        </p>
+      </div>
+      <div class="showcase__img">
+        <img src="img/reparto.jpg" alt="Reparto del mes, tres estrategias comparadas lado a lado">
+      </div>
+    </div>
+
+    <!-- Foto 6: edición del objetivo DCA -->
+    <div class="showcase showcase--reverse">
+      <div class="showcase__img" style="max-width:480px;">
+        <img src="img/dca-edit.jpg" alt="Edición del objetivo mensual de DCA en €">
+      </div>
+      <div class="showcase__text">
+        <h3 style="font-size:19px;font-weight:800;margin-bottom:12px;">Cambia el objetivo cuando quieras</h3>
+        <p style="color:var(--text2);font-size:15px;">
+          Pulsa el lápiz ✎ del card DCA y escribe tu nuevo objetivo mensual en €.
+          La barra de progreso se actualiza al momento y muestra cuánto llevas
+          invertido este mes y cuánto te queda.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TABLA DE CARTERA ══ -->
+<section class="section section--border" id="cartera" data-section="cartera">
+  <div class="section__inner">
+    <p class="section__label">Cartera</p>
+    <h2 class="section__title">Todo de un<br><em>solo vistazo</em></h2>
+    <p class="section__sub">
+      Precio en vivo, cambio 24h, PnL en € y %, y peso en la cartera.
+      Ordena por cualquier columna. Oculta las monedas que no quieras ver sin borrarlas.
+    </p>
+
+    <!-- Foto 8: tabla de activos ordenable -->
+    <div class="screenshot">
+      <img src="img/cartera-tabla.jpg" alt="Tabla de activos con precios en vivo, PnL y peso en cartera">
+    </div>
+  </div>
+</section>
+
+<!-- ══ DISTRIBUCIÓN Y EVOLUCIÓN ══ -->
+<section class="section section--border">
+  <div class="section__inner">
+    <p class="section__label">Análisis</p>
+    <h2 class="section__title">Distribución<br><em>y evolución</em></h2>
+    <p class="section__sub">
+      Gráfico de tarta por activo y línea de inversión acumulada vs. valor actual.
+      Ves de un vistazo si tu DCA mensual está generando rentabilidad real.
+    </p>
+
+    <!-- Foto 9: donut de distribución + gráfico de evolución -->
+    <div class="screenshot">
+      <img src="img/distribucion-evolucion.jpg" alt="Distribución por activo y gráfico invertido vs valor actual">
+    </div>
+  </div>
+</section>
+
+<!-- ══ STAKING ══ -->
+<section class="section section--border" id="staking" data-section="staking">
+  <div class="section__inner">
+    <p class="section__label">Staking</p>
+    <h2 class="section__title">Tus rentas pasivas,<br><em>en números reales</em></h2>
+    <p class="section__sub">
+      Marca cualquier moneda como "Staking" desde su ficha, introduce el APR y la app
+      calcula lo que vas a ganar este año y este mes, en € y en tokens.
+    </p>
+
+    <!-- Foto 10: panel de staking ATOM + TIA con APR, ingreso anual y mensual -->
+    <div class="showcase showcase--reverse" style="margin-bottom:36px;">
+      <div class="showcase__img">
+        <img src="img/staking.jpg" alt="Panel de staking con ATOM al 19.50% APR y TIA al 5.48% APR">
+      </div>
+      <div class="showcase__text">
+        <h3 style="font-size:19px;font-weight:800;margin-bottom:12px;">Cómo añadir una moneda al staking</h3>
+        <div class="steps" style="grid-template-columns:1fr;gap:24px;counter-reset:steps;">
+          <div class="step">
+            <h3>Abre la ficha de la moneda</h3>
+            <p>Pulsa sobre cualquier fila de la tabla de cartera para abrir su ficha de detalle.</p>
+          </div>
+          <div class="step">
+            <h3>Cambia la categoría a "Staking"</h3>
+            <p>En la sección "Categoría" pulsa el botón Staking. La app te pedirá el APR en %.</p>
+          </div>
+          <div class="step">
+            <h3>La moneda aparece en el panel</h3>
+            <p>Automáticamente se desplaza a la sección Staking con su ingreso anual y mensual calculado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ AIRDROPS + CUSTODIA ══ -->
+<section class="section section--border">
+  <div class="section__inner">
+    <p class="section__label">Airdrops y custodia</p>
+    <h2 class="section__title">Los tokens gratis<br><em>sin distorsionar tu PnL</em></h2>
+    <p class="section__sub">
+      Marca una moneda como "Airdrop" y su coste queda a 0 automáticamente.
+      Tu P&L refleja solo lo que has invertido de verdad.
+      Además, controla cómo tienes distribuida la custodia entre exchanges.
+    </p>
+
+    <!-- Foto 11: tabla de airdrops (Mode, PI, AtomOne) + barra de custodia -->
+    <div class="screenshot">
+      <img src="img/airdrops-custodia.jpg" alt="Panel de airdrops y barra de custodia por exchange">
+    </div>
+  </div>
+</section>
+
+<!-- ══ MOVIMIENTOS ══ -->
+<section class="section section--border">
+  <div class="section__inner">
+    <p class="section__label">Historial</p>
+    <h2 class="section__title">Cada compra,<br><em>registrada y buscable</em></h2>
+    <p class="section__sub">
+      Tres tipos de movimiento: <strong>Compra</strong>, <strong>Venta</strong>
+      y <strong>Recompensa</strong> (tokens gratuitos de staking o airdrops, a coste 0).
+      Filtra, edita o borra cualquier fila.
+    </p>
+
+    <!-- Foto 12: tabla de movimientos con SOL compras + recompensas staking -->
+    <div class="screenshot">
+      <img src="img/movimientos.jpg" alt="Historial de movimientos filtrable con edición y borrado por fila">
+    </div>
+
+    <div style="margin-top:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:20px;">
+        <div style="font-size:20px;margin-bottom:8px;">🟢</div>
+        <h3 style="font-size:15px;font-weight:700;margin-bottom:6px;">Compra</h3>
+        <p style="font-size:13px;color:var(--text2);">Introduce importe en € y cantidad. El precio medio se recalcula automáticamente.</p>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:20px;">
+        <div style="font-size:20px;margin-bottom:8px;">🔵</div>
+        <h3 style="font-size:15px;font-weight:700;margin-bottom:6px;">Venta</h3>
+        <p style="font-size:13px;color:var(--text2);">Reduce la cantidad en cartera y actualiza el PnL realizado.</p>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:20px;">
+        <div style="font-size:20px;margin-bottom:8px;">⭐</div>
+        <h3 style="font-size:15px;font-weight:700;margin-bottom:6px;">Recompensa</h3>
+        <p style="font-size:13px;color:var(--text2);">Añade tokens a coste 0. Para recompensas de staking y airdrops.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRIVACIDAD ══ -->
+<section class="section section--border" id="privacidad" data-section="privacidad">
+  <div class="section__inner">
+    <p class="section__label">Privacidad</p>
+    <h2 class="section__title">Tu cartera es<br><em>solo tuya</em></h2>
+    <p class="section__sub">Cero trackers. Cero servidores propios. Cero cuentas.</p>
+
+    <div class="privacy">
+      <div class="privacy__card">
+        <div class="privacy__icon">🔒</div>
+        <h3>Sin cuenta</h3>
+        <p>No pedimos email ni contraseña. Entras y empiezas.</p>
+      </div>
+      <div class="privacy__card">
+        <div class="privacy__icon">💻</div>
+        <h3>Datos locales</h3>
+        <p>Todo vive en el localStorage de tu navegador. Nadie más accede.</p>
+      </div>
+      <div class="privacy__card">
+        <div class="privacy__icon">📡</div>
+        <h3>Solo precios</h3>
+        <p>La única llamada externa es pedir precios a CoinGecko y Binance.</p>
+      </div>
+      <div class="privacy__card">
+        <div class="privacy__icon">📱</div>
+        <h3>Instálala como app</h3>
+        <p>PWA completa. Se instala en móvil y escritorio, funciona sin conexión.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA FINAL ══ -->
+<div class="cta">
+  <h2 class="cta__title">Empieza ahora.<br><em>Es gratis.</em></h2>
+  <p class="cta__sub">Sin tarjeta. Sin registro. Sin trampa.<br>La abres, añades tus monedas y ya funciona.</p>
+  <a href="https://mycryptofolio.app" class="btn btn--primary" target="_blank" rel="noopener" style="font-size:16px;padding:16px 36px;">
+    Abrir MyCryptoFolio →
+  </a>
+  <p class="cta__note">Hecho por <a href="https://github.com/fvilpaz" style="color:var(--text2);">Fernando Vilas Paz</a></p>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <span>MyCryptoFolio &copy; 2026 · Herramienta personal, no asesoramiento financiero.</span>
+  <div class="footer__links">
+    <a href="https://mycryptofolio.app" target="_blank" rel="noopener">Abrir app</a>
+    <a href="https://www.coingecko.com/" target="_blank" rel="noopener">Precios: CoinGecko</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
