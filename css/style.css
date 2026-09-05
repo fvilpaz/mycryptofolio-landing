@@ -175,11 +175,12 @@ button { font-family: var(--font); }
   padding: 14px 28px;
   background: var(--green); color: #000;
   font-size: 15px;
-  box-shadow: 0 0 0 0 rgba(14,203,129,0);
+  box-shadow: 0 4px 16px rgba(14,203,129,.35);
 }
 .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(14,203,129,.3);
+  box-shadow: 0 8px 32px rgba(14,203,129,.5);
+  background: #12e891;
 }
 .btn--ghost {
   padding: 14px 28px;
