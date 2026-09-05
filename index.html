@@ -7,9 +7,13 @@
   <meta name="description" content="Gestiona tu cartera crypto en tiempo real. Cubos de estrategia, staking, airdrops y DCA mensual. Sin registro. Sin servidor. 100% privado.">
   <meta property="og:title" content="MyCryptoFolio · Tu cartera crypto, sin excusas">
   <meta property="og:description" content="Valor en vivo, cubos de estrategia, staking y DCA mensual. Instálala como app. Gratis.">
-  <meta property="og:image" content="img/cubos.jpg">
+  <meta property="og:image" content="https://fvilpaz.github.io/mycryptofolio-landing/img/cubos.jpg">
+  <meta property="og:url" content="https://fvilpaz.github.io/mycryptofolio-landing/">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://fvilpaz.github.io/mycryptofolio-landing/img/cubos.jpg">
   <meta name="theme-color" content="#0d1117">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230ecb81'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='26' font-weight='bold' fill='%23000' text-anchor='middle'%3EMC%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,13 +21,17 @@
 <!-- ══ NAV ══ -->
 <nav class="nav">
   <div class="nav__logo">MyCrypto<span>Folio</span></div>
-  <div class="nav__links">
+  <div class="nav__links" id="nav-links">
     <a href="#cubos" data-nav="cubos">Estrategia</a>
     <a href="#cartera" data-nav="cartera">Cartera</a>
     <a href="#staking" data-nav="staking">Staking</a>
     <a href="#privacidad" data-nav="privacidad">Privacidad</a>
+    <a href="#faq" data-nav="faq">FAQ</a>
     <a href="https://mycryptofolio.app" class="nav__cta" target="_blank" rel="noopener">Abrir app →</a>
   </div>
+  <button class="nav__burger" id="nav-burger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- ══ HERO ══ -->
@@ -353,6 +361,48 @@
         <h3>Tema claro y oscuro</h3>
         <p>Cambia con un clic. La app recuerda tu preferencia.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="section section--border" id="faq" data-section="faq">
+  <div class="section__inner">
+    <p class="section__label">FAQ</p>
+    <h2 class="section__title">Preguntas<br><em>frecuentes</em></h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Es gratis?</summary>
+        <p>Sí, completamente gratis. Sin planes de pago, sin funciones bloqueadas, sin trampa.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Mis datos están seguros?</summary>
+        <p>Todo vive en el localStorage de tu navegador. No hay servidor propio, no hay base de datos nuestra. Nadie más que tú accede a tu cartera.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Funciona en el móvil?</summary>
+        <p>Sí. Es una PWA (Progressive Web App): puedes instalarla en tu móvil como si fuera una app nativa desde el navegador, sin pasar por ninguna tienda.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué pasa si cierro el navegador?</summary>
+        <p>Nada. Tus datos persisten en el navegador. La próxima vez que abras la app todo sigue donde lo dejaste.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo usarla en varios dispositivos?</summary>
+        <p>Sí, mediante el sistema de sync con un Gist privado de GitHub. Exportas en un dispositivo e importas en otro, o activas el sync automático.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿De dónde vienen los precios?</summary>
+        <p>De CoinGecko como fuente principal, con Binance, Kraken y DeFiLlama como respaldo. Si una fuente falla, otra la cubre. Los precios se actualizan automáticamente cada minuto.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo añadir cualquier criptomoneda?</summary>
+        <p>Sí, cualquier moneda que esté en CoinGecko. El catálogo incluye miles de tokens.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué es el sistema de cubos?</summary>
+        <p>Es una forma de estructurar tu cartera en tres zonas: Núcleo (monedas grandes y estables), Satélites (mayor riesgo y potencial) y Refugio (stablecoins). Tú defines el % objetivo de cada cubo y la app te dice si estás dentro o fuera del objetivo en tiempo real.</p>
+      </details>
     </div>
   </div>
 </section>

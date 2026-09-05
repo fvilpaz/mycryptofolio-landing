@@ -305,10 +305,69 @@ img { display: block; max-width: 100%; }
 .footer a:hover { color: var(--text); }
 .footer__links { display: flex; gap: 20px; }
 
+/* ── FAQ ── */
+.faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 720px; }
+.faq-item {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: border-color .2s;
+}
+.faq-item[open] { border-color: rgba(14,203,129,.3); }
+.faq-item summary {
+  padding: 18px 24px;
+  font-size: 15px; font-weight: 600; cursor: pointer;
+  list-style: none;
+  display: flex; justify-content: space-between; align-items: center;
+  user-select: none;
+}
+.faq-item summary::after {
+  content: '+'; font-size: 20px; font-weight: 300; color: var(--green);
+  transition: transform .2s;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p {
+  padding: 0 24px 18px;
+  font-size: 14px; color: var(--text2); line-height: 1.7;
+}
+
+/* ── HAMBURGUESA ── */
+.nav__burger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.nav__burger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--text); border-radius: 2px;
+  transition: all .25s;
+}
+.nav__burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__burger.open span:nth-child(2) { opacity: 0; }
+.nav__burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── FADE-IN ON SCROLL ── */
+.fade-in {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+.fade-in.visible { opacity: 1; transform: none; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .nav { padding: 0 20px; }
-  .nav__links { display: none; }
+  .nav__burger { display: flex; }
+  .nav__links {
+    display: none; flex-direction: column; gap: 0;
+    position: absolute; top: 64px; left: 0; right: 0;
+    background: rgba(13,17,23,.97);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+  }
+  .nav__links.open { display: flex; }
+  .nav__links a { padding: 14px 24px; font-size: 15px; border-bottom: 1px solid var(--border); }
+  .nav__links .nav__cta { margin: 12px 24px; text-align: center; }
   .showcase { grid-template-columns: 1fr; }
   .showcase--reverse { direction: ltr; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
