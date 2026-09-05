@@ -518,7 +518,8 @@ button { font-family: var(--font); }
   font-weight: 700; font-size: 13px; flex-shrink: 0;
   margin-top: 1px;
 }
-.pricing__cta { width: 100%; justify-content: center; padding: 12px 20px; font-size: 14px; }
+.pricing__cta { flex: 1; justify-content: center; padding: 10px 14px; font-size: 13px; }
+.pricing__actions { display: flex; gap: 8px; width: 100%; }
 
 /* ── CAFÉ ── */
 .cafe-wallets {
