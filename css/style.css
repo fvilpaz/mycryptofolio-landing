@@ -267,12 +267,6 @@ button { font-family: var(--font); }
   font-size: 11px; font-weight: 700;
   letter-spacing: .12em; text-transform: uppercase;
   color: var(--green); margin-bottom: 14px;
-  display: flex; align-items: center; gap: 8px;
-}
-.section__label::before {
-  content: ''; display: block;
-  width: 16px; height: 2px; background: var(--green);
-  border-radius: 2px;
 }
 .section__title {
   font-size: clamp(28px, 4vw, 44px);
