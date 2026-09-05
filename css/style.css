@@ -464,6 +464,63 @@ button { font-family: var(--font); }
 .privacy__card h3 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
 .privacy__card p  { font-size: 13px; color: var(--text2); line-height: 1.6; }
 
+/* ── PRICING ── */
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+.pricing__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  position: relative;
+  transition: border-color .2s, transform .2s;
+  display: flex; flex-direction: column; gap: 24px;
+}
+.pricing__card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
+.pricing__card--featured {
+  border-color: var(--green-border);
+  background: linear-gradient(160deg, rgba(14,203,129,.07) 0%, var(--bg-card) 60%);
+}
+.pricing__card--featured:hover { border-color: var(--green); }
+.pricing__card--dark { background: var(--bg2); }
+
+.pricing__badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--green); color: #000;
+  font-size: 11px; font-weight: 700;
+  padding: 4px 14px; border-radius: 20px;
+  letter-spacing: .04em; white-space: nowrap;
+}
+.pricing__header { display: flex; flex-direction: column; gap: 10px; }
+.pricing__name {
+  font-size: 14px; font-weight: 700;
+  color: var(--text2); letter-spacing: .04em; text-transform: uppercase;
+}
+.pricing__card--featured .pricing__name { color: var(--green); }
+.pricing__price { display: flex; align-items: baseline; gap: 4px; }
+.pricing__amount { font-size: 30px; font-weight: 800; letter-spacing: -1px; }
+.pricing__period { font-size: 13px; color: var(--text2); }
+.pricing__desc { font-size: 13.5px; color: var(--text2); line-height: 1.6; }
+
+.pricing__list {
+  list-style: none; display: flex; flex-direction: column; gap: 10px;
+  flex: 1;
+}
+.pricing__list li {
+  font-size: 13.5px; color: var(--text2);
+  display: flex; align-items: flex-start; gap: 10px;
+}
+.pricing__list li::before {
+  content: '✓'; color: var(--green);
+  font-weight: 700; font-size: 13px; flex-shrink: 0;
+  margin-top: 1px;
+}
+.pricing__cta { width: 100%; justify-content: center; padding: 12px 20px; font-size: 14px; }
+
 /* ── FAQ ── */
 .faq-list { display: flex; flex-direction: column; gap: 8px; max-width: 680px; }
 .faq-item {
