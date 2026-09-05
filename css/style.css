@@ -347,6 +347,11 @@ button { font-family: var(--font); }
   flex-direction: column;
   gap: 12px;
 }
+.buckets--row {
+  flex-direction: row;
+  margin-bottom: 0;
+}
+.buckets--row .bucket { flex: 1; }
 .bucket {
   border-radius: var(--radius-sm); padding: 20px 24px;
   border: 1px solid transparent;
@@ -605,6 +610,7 @@ button { font-family: var(--font); }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
+  .buckets--row { flex-direction: column; }
   .nav { padding: 0 20px; }
   .nav__burger { display: flex; }
   .nav__links {
