@@ -35,7 +35,7 @@ const fadeObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
 // ── COPY WALLET ──
-document.querySelectorAll('.cafe-wallet__copy').forEach(btn => {
+document.querySelectorAll('button.cafe-wallet__copy').forEach(btn => {
   btn.addEventListener('click', () => {
     navigator.clipboard.writeText(btn.dataset.addr).then(() => {
       btn.textContent = '¡Copiado!';

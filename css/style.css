@@ -562,6 +562,7 @@ button { font-family: var(--font); }
   cursor: pointer; transition: background .15s;
   font-family: var(--font);
 }
+a.cafe-wallet__go { display: inline-block; text-decoration: none; }
 .cafe-wallet__copy:hover { background: rgba(14,203,129,.2); }
 .cafe-wallet__copy.copied { background: var(--green); color: #000; }
 .cafe-note {
